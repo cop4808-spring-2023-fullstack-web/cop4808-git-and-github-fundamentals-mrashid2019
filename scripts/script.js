@@ -41,9 +41,24 @@ function clickButton() {
             } else if(buttons[i].classList.contains('sign')) {
                 inputSign(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('clear'))
+            } else if(buttons[i].classList.contains('clear')) {
                 clearDisplay();
+                updateDisplay(); 
+            }
+        //Adding the code to make functions work when clicked       
+             else if(buttons[i].classList.contains('sqrt')) {
+                sqrt(displayValue);
                 updateDisplay();
+            } else if(buttons[i].classList.contains('square')) {
+                square(displayValue);
+                updateDisplay();
+            } else if(buttons[i].classList.contains('PI')) {
+                PI(displayValue);
+                updateDisplay();
+            } else if(buttons[i].classList.contains('e')) {
+                e(displayValue);
+                updateDisplay(); }  
+        // End of my code
         }
     )}
 }
@@ -176,9 +191,22 @@ function operate(x, y, op) {
         } else {
         return x / y;
         }
-    }
+    //Implementing the functionality of the new functions
+    } else if(op === 'sqrt'){
+        return Math.sqrt(x);
+    } else if(op === 'square'){
+        return x * x;
+    } else if(op === 'PI'){
+        return Math.PI(x); 
+    } else if(op === 'e'){
+        return Math.E(x);
+    }    
+    //End of my functions implementation
+
 }
 
 function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
 }
+
+
