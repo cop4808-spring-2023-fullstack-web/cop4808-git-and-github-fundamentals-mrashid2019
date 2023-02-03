@@ -209,4 +209,19 @@ function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
 }
 
+//Adding the displayValue codes for each function with a fixed amount of digits so it does not exceed the output box
+function sqrt(num) {
+    return displayValue = (Math.sqrt(num)).toFixed(9);
+}
 
+function square(num) {
+    return displayValue = (num * num).toFixed(9);
+}
+
+function PI(num) {
+    return displayValue = (Math.PI).toFixed(9);
+}
+
+function e(num) {
+    return displayValue = (Math.E).toFixed(9);
+} 
