@@ -1,8 +1,8 @@
 # Mahdia Rashid
 
-## Demo of Upgraded Calculator
+Demo of Upgraded Calculator
 
-<img src="Calculator-demo.gif">
+<img src="Calculator-demo.gif" width="600">
 
 # :wave: The Basics of GitHub
 
