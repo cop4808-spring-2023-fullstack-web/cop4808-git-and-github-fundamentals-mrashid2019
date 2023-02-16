@@ -7,8 +7,18 @@ let result = null;
 const buttons = document.querySelectorAll('button');
 
 window.addEventListener('keydown', function(e){
-    const key = document.querySelector(`button[data-key='${e.keyCode}']`);
+   const key = document.querySelector(`button[data-key='${e.key}']`);
+   console.log(e)
+   console.log("keypressed=", key, "keycode=", e.keyCode, "key", e.key)
+   
+   try{
     key.click();
+   }
+   catch (error) {
+    console.log("Error - ", error)
+    console.log("Unsupported key was pressed key=", e.key)
+   }
+
 });
 
 function updateDisplay() {
